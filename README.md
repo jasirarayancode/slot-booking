@@ -1,11 +1,11 @@
-# Turf Booking Website
+#Badminton court slot Booking Website
 
-This is a website project aimed at providing a platform for managing turf bookings. Users can view available turfs, book slots, make payments, and send complaints. The project is developed using HTML, CSS, JavaScript for the frontend, and Python with Django framework for the backend. MySQL Workbench is used for the database management.
+This is a website project aimed at providing a platform for managing court slot bookings. Users can view available courts, book slots,  and send complaints. The project is developed using HTML, CSS, JavaScript for the frontend, and Python with Django framework for the backend. MySQL Workbench is used for the database management.
 
 ## Features
 
 - User authentication system
-- Turf viewing and booking
+- court viewing and booking
 - Slot management
 - Payment integration
 - Complaint submission
@@ -37,8 +37,8 @@ DATABASES = {
 ## Usage
 
 1. **User Registration:** Users can register for an account on the website using their email address and password.
-2. **View Turfs:** After logging in, users can view the list of available turfs along with their details such as location, facilities, and pricing.
-3. **Book Turf:** Users can select a turf and book slots based on their preferred date and time.
+2. **View court:** After logging in, users can view the list of available turfs along with their details such as location, facilities, and pricing.
+3. **Book court:** Users can select a turf and book slots based on their preferred date and time.
 4. **Make Payment:** Once the booking is confirmed, users can proceed to make payments securely through integrated payment gateways.
 5. **Send Complaints:** Users can submit complaints or feedback regarding their experience using the website.
 
