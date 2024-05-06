@@ -1,0 +1,30 @@
+{% extends 'temp/user_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view payment</title>
+</head>
+<body>
+	<table border="1" class="table table-bordered">
+		<tr>
+			<td>Amount</td>
+			<td>Booking date</td>
+			<td>Booking Time</td>
+			<td></td>
+		</tr>
+        {% for i in p %}
+		<tr>
+			<td>{{ i.booking.turf.price }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+			<td><a class="btn btn-danger" href="/payment/post_payment/{{i.pay_id}}" >Add payment</a> </td>
+			
+		</tr>
+        {% endfor %}
+	</table>
+	<alert class="text-danger">{{msg}}</alert>
+
+</body>
+</html>
+{% endblock %}

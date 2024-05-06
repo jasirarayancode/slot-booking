@@ -1,0 +1,37 @@
+{% extends 'temp/manager_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>turf</title>
+</head>
+<body>
+	<table class="table container">
+        <tr>
+            <!-- <th>Slot</th> -->
+            <th>Start time</th>
+            <th>End Time</th>
+            <th></th>
+        </tr>
+        {% for i in s %}
+        <tr>
+            <!-- <td>Slot</td> -->
+            <td>{{i.slot}} {{i.slot_sec}}</td>
+            <td>{{i.e_time}} {{i.etime_sec}}</td>
+            <td><a class="btn btn-danger" href="/slot/dlt_slot/{{i.slot_id}}" onclick=" return confirm('Are you sure?')">Delete</a> </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    {% if msg %}
+	<script>
+		var message="{{msg}}"
+		alert(message)
+		</script>
+	{% endif %}
+    
+    
+</body>
+</html>
+{% endblock %}

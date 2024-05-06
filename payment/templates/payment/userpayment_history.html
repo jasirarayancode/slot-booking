@@ -1,0 +1,30 @@
+{% extends 'temp/user_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view payment</title>
+</head>
+<body>
+	<table border="1" class="table table-bordered">
+		<tr>
+			<th>Turf details</th>
+			<th>Amount</th>
+			<th>Payment date</th>
+			<th>Payment Time</th>	
+		</tr>
+        {% for i in p %}
+		<tr>
+			<td>{{ i.booking.turf.turf_name}}, {{ i.booking.turf.address}}, {{ i.booking.turf.categoty}}</td>
+			<td>{{ i.booking.turf.price }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+			
+		</tr>
+        {% endfor %}
+	</table>
+	<alert class="text-danger">{{msg}}</alert>
+
+</body>
+</html>
+{% endblock %}
